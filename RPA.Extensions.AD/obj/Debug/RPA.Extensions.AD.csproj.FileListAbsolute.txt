@@ -1,0 +1,6 @@
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\bin\Debug\RPA.Extensions.AD.dll
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\bin\Debug\RPA.Extensions.AD.pdb
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\obj\Debug\RPA.Extensions.AD.csprojAssemblyReference.cache
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\obj\Debug\RPA.Extensions.AD.csproj.CoreCompileInputs.cache
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\obj\Debug\RPA.Extensions.AD.dll
+C:\Users\Sikha.P\source\repos\RPA.Extensions.AD\RPA.Extensions.AD\obj\Debug\RPA.Extensions.AD.pdb
