@@ -44,7 +44,7 @@ namespace RPA.Extensions.AD
             }
         }
 
-        public static string UpdateUserMustChangePassword(string ldapPath, string adminUsername, string adminPassword, string userEmail)
+        public static string UpdateUserMustChangePassword(string ldapPath, string adminUsername, string adminPassword, string searchUserBy, string searchValue)
         {
             try
             {
@@ -52,26 +52,26 @@ namespace RPA.Extensions.AD
                 {
                     using (var searcher = new DirectorySearcher(entry))
                     {
-                        searcher.Filter = $"(&(objectClass=user)(mail={userEmail}*))";
+                        searcher.Filter = $"(&(objectClass=user)({searchUserBy}={searchValue}*))";
                         SearchResult result = searcher.FindOne();
                         if (result != null)
                         {
                             var userEntry = result.GetDirectoryEntry();
                             if (userEntry != null)
                             {
-                                userEntry.Properties["pwdLastSet"][0] = 0;
+                                userEntry.Properties["pwdLastSet"][0] = 1;
                                 userEntry.CommitChanges();
                                 return "Updated User must change password";
                            
                             }
                             else
                             {
-                                return $"Cannot find the user with Email as {userEmail}";
+                                return $"Cannot find the user with {searchUserBy} as {searchValue}";
                             }
                         }
                         else
                         {
-                            return $"Cannot find the user with Email as {userEmail}";
+                            return $"Cannot find the user with {searchUserBy} as {searchValue}";
                         }
                     }
                 }
